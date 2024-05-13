@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Vanitha</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">VaniTha</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#team" class="nav-item nav-link">Blogs</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light  my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">VANITHA</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Mobile Designer</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <!-- <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a> -->
+                        <a id="pdfLink" class="btn btn-primary py-3 px-4 me-5" href="https://drive.google.com/file/d/1aGcUtcD5HyZtUioSVjjAgJkVhFFIO5Ty/view?usp=drivesdk" target="_blank">Download CV</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="img/profile.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">03</h1>
+                            <h5 class="mb-0">Years</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">of working experience as a web designer & developer</h3>
+                    </div>
+                    <p class="mb-4">Passionate Front-End Developer And Designer With 3+ Years Of Experience Creating Visually Appealing And Responsive Web Interfaces. Proficient In HTML, CSS, JavaScript,Jquery And Angular, Focused On Delivering Seamless User Experiences. Adept At UI/UX Design,Figma, Wireframing, And Prototyping Tools. Known For Blending Creativity With Technical Expertise To Produce Innovative And User-Centric Designs. Successful Track Record In Collaborating With Cross-Functional Teams To Bring Projects From Concept To Completion. Specialized In Mobile-First Development And Responsive Design..</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="Experience.html">Read More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                    </div>
+                    <p class="mb-4">Demonstrated success in cultivating happy client relationships through effective communication, attention to detail, and a commitment to delivering high-quality results.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">34</h2>
+                    </div>
+                    <p class="mb-0">Accomplished Front-End Developer with a strong record of successfully completing projects that leave clients satisfied and impressed. Proficient in creating visually appealing, responsive, and intuitive web interfaces. Recognized for delivering on-time, high-quality solutions that meet and exceed client expectations. Proactive in communication and collaboration, ensuring a seamless project experience from inception to delivery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <p class="mb-4">Versatile and skilled professional with a robust background in [industry/field]. Proven expertise in [key skills or technologies, e.g., HTML, CSS, JavaScript, React] and a track record of successfully [specific accomplishments or projects, e.g., designing responsive interfaces, optimizing website performance]. Demonstrated ability to [any unique or notable skills]. Adept at collaborating with cross-functional teams, ensuring effective communication and pro
+                        ject success.</p>
+                  
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content ">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>UI Designer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2024</p>
+                                   
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Ui Development</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2024</p>
+                                
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Web Designer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2024</p>
+                              
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Web Developer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2024</p>
+                                
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>UI Design Course</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2019 - 2020</p>profenaa Technologies
+                                    <h6 class="mb-0"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Ui Development</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2023</p>
+                                    <h6 class="mb-0">Profenaa Technologies</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Web Design</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2023 - 2024</p>
+                                    <h6 class="mb-0">BlueKode</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Apps Design</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2023 - 2024</p>
+                                    <h6 class="mb-0">BlueKode</h6>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <h3 class="mb-4 col-lg-6 wow fadeInUp" data-wow-delay="0.1s">My Skills</h3>
+                <div class="row align-items-center">
+                    <div class="box wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="container wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="row">
+                                <!-- HTML Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fa-brands fa-html5 fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>HTML</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>HyperText Markup Language</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- CSS Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fa-brands fa-css3-alt fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>CSS</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Cascading Style Sheets</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- jQuery Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fa-brands fa-js-square fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>jQuery</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>JavaScript Library</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Wireframing Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fas fa-drafting-compass fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Wireframing</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Sketching of User Interface</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fas fa-drafting-compass" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Prototyping Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fas fa-vial fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Prototyping</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Creating Interactive Mockups</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fas fa-vial" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- MySQL Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fas fa-database fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>MySQL</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Open-source Relational Database Management System</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fas fa-database" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PHP Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fab fa-php fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>PHP</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Hypertext Preprocessor</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fab fa-php" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- JavaScript Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fa-brands fa-js-square fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>JavaScript</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>High-level Programming Language</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fa-brands fa-js-square" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- React JS Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fab fa-react fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>React JS</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>JavaScript Library for Building User Interfaces</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fab fa-react" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bootstrap Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fa-brands fa-bootstrap fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Bootstrap</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Front-end Framework for Developing Responsive Websites</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Figma Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fab fa-figma fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Figma</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Collaborative Interface Design Tool</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fab fa-figma" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Material UI Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fab fa-react fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Material UI</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>React Components for Faster and Easier Web Development</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fab fa-react" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tailwind CSS Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fab fa-tailwind fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Tailwind CSS</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Utility-first CSS Framework</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fab fa-tailwind" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Canva Card -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="box-part text-center">
+                                        <div class="front">
+                                            <i class="fas fa-paint-brush fa-2xl" aria-hidden="true"></i>
+                                            <div class="title">
+                                                <br>
+                                                <h4>Canva</h4>
+                                            </div>
+                                            <div class="text">
+                                                <span>Graphic Design Platform</span>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Angular Card -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="box-part text-center">
+                        <div class="front">
+                            <i class="fab fa-angular fa-2xl" aria-hidden="true"></i>
+                            <div class="title">
+                                <br>
+                                <h4>Angular</h4>
+                            </div>
+                            <div class="text">
+                                <span>Platform for Building Mobile and Desktop Web Applications</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <i class="fab fa-angular" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- SQL Card -->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="box-part text-center">
+                        <div class="front">
+                            <i class="fas fa-database fa-2xl" aria-hidden="true"></i>
+                            <div class="title">
+                                <br>
+                                <h4>SQL</h4>
+                            </div>
+                            <div class="text">
+                                <span>Structured Query Language</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <i class="fas fa-database" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="contact.html">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Creative Design</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Creative designers develop brochures, banners, business cards, social media ads, product packaging, and brand identity assets. Many creative designers work in the marketing and advertising industry and often create brand assets, such as: Printed brochures.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                         <img src="img/logo-design.png" alt="" width="40px">
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Logo Design</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>A logo design brief is a document containing all the significant details about the logo design project. It's written or filled in by the business, owner or company and handed over to the designer so they know precisely what kind of logo to make. Logo design briefs come in many different forms.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Design</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Web design identifies the goals of a website or webpage and promotes accessibility for all potential users. This process involves organizing content and images across a series of pages and integrating applications and other interactive elements</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">UI/UX Design</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>UI UX designers create the user interface for an app, website, or other interactive media. Their work includes collaborating with product managers and engineers to gather requirements from users before designing ideas that can be communicated using storyboards.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <img src="img/cloud-service.png" alt="" width="40px">
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Development</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Web developers build and maintain websites and web applications using programming, design tools and languages such as HTML, CSS, Python and JavaScript to meet both client and end-user needs.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <img src="img/ux-design.png" alt="" width="40px">
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3"> Mobile App Designer</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Designing interfaces for iOS and Android applications that are visually appealing, intuitive, and user-friendly. Contributing to the entire design process from design strategy to design execution.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                           <img src="img/website-design-2-xxl.png" alt="" width="40px">
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3"> Visual Design</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Visual designers develop and create images that are typically used in marketing applications. They must have the artistic ability necessary to generate these images and the computer skills necessary to design them. To be successful, they should also have some knowledge of advertising methods.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-dark" ></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Version Control</h4>
+                            <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
+                            <span>Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                        <li class="mx-3" data-filter=".second">Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="http://healthuno.com/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://www.kpnfarmfresh.com/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://bluekodedigital.com/#/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://www.swarovski.com/en-IN/c-swa-root/Categories/f/flags/fl-newin/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="http://bluekode.com/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="http://bluekode.com/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Blogs</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/portfolio-1.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>06</h5>
+                                <span>March</span>
+                            </div>
+                           <a href="blogs.html"> <i class="fa fa-arrow-right fa-2x text-primary"></i></a>
+                        </div>
+                       
+                    </div>
+                    <p>Proficient in a wide range of front-end and back-end technologies, including HTML, CSS, JavaScript, and various frameworks (e.g., React, Angular, Node.js).</p>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/portfolio-6.jpg#" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>01</h5>
+                                <span>January</span>
+                            </div>
+                            <a href="blogs.html"> <i class="fa fa-arrow-right fa-2x text-primary"></i></a>
+                        </div>
+                       
+                    </div>
+                    <p>Dynamic Mobile Designer with a keen eye for detail and a passion for creating visually striking and user-friendly mobile interfaces. Proficient in industry-standard design tools and platforms, adept at translating concepts into compelling app experiences. </p>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/portfolio-3.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>08</h5>
+                                <span>Feburary</span>
+                            </div>
+                            <a href="blogs.html"> <i class="fa fa-arrow-right fa-2x text-primary"></i></a>
+                        </div>
+                        
+                    </div>
+                    <p>Creative and detail-oriented Web Designer with a proven ability to transform concepts into visually appealing and intuitive websites.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">"I had the pleasure of working closely with Ms.Vanitha on a recent web development project, and I cannot overstate the positive impact they had on the entire process. From the initial concept discussions to the final implementation,Ms.Vanitha consistently demonstrated a deep understanding of web development principles and an unwavering commitment to delivering high-quality results."</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">What stood out the most was Ms.Vanitha's technical proficiency. Their mastery of front-end technologies, including HTML, CSS, and JavaScript, coupled with a keen eye for design, ensured that our website not only functioned seamlessly but also boasted a visually appealing and user-friendly interface. Ms.Vanitha brought innovative solutions to the table, solving complex challenges with ease and contributing significantly to the overall success of the project.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Beyond technical skills, Ms.Vanitha  proved to be an exceptional team player. Their communication skills and ability to collaborate with designers, back-end developers, and stakeholders were exemplary. The dedication to meeting deadlines and exceeding expectations highlighted their professionalism and commitment to delivering a product that not only met but surpassed our project goals. I highly recommend Ms.Vanitha  for any web development endeavors and look forward to the opportunity to work together again in the future.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Contact <em></em>Me</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="contact.html">Say Hello</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  
+                  
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+91 9344018583</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">pvanitha2109@gmail.com</h3>
+                    <hr class="w-100">
+                   
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                       
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <div class="row g-3">
+                            <input type="hidden" name="access_key" value="46a0c7f6-c037-4d8f-9b4c-fc970c1d3665">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control"  name="name" placeholder="Your Name" required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control"  name="email" placeholder="Your Email" required>
+                                    <label for="email">Your Email</label>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject " required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" name="message"  style="height: 100px"></textarea required>
+                                    <label for="message">Message</label>
+                                </div>
+                           
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Map Start -->
+    <!-- <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- Map End -->
+
+
+   <!-- Copyright Start -->
+   <div class="container-fluid bg-dark text-white py-4">
+       
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0  ">
+                
+                 <p class="copy-right">Follow me</p>
+            <div class="d-flex pt-2 contact-para">
+                <a class="btn btn-square btn-primary me-2" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg></a>
+                <a class="btn btn-square btn-primary me-2" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg></i></a>
+                <a class="btn btn-square btn-primary me-2" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                  </svg></a>
+                <a class="btn btn-square btn-primary me-2" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                  </svg></a>
+            </div>
+            <div class="footer-1">
+                &copy; <a class="border-bottom text-secondary" href="#">p.Vanitha</a>, All Right Reserved.
+            </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+<!-- Copyright End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('pdfLink').addEventListener('click', function() {
+          // Add your JavaScript code here
+        });
+      </script>
+      
+</body>
+
+</html>
