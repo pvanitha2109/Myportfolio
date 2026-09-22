@@ -146,7 +146,7 @@ function toggleAiVoice() {
         return;
     }
 
-    var text = "Hello! Welcome to my portfolio. I am Vanitha P, an AI & Senior Web Developer with over 6 years of experience building modern, scalable web applications, WordPress websites, and custom AI tools. I specialize in React, Node.js, PHP, and Generative AI integrations.";
+    var text = "Hello! Welcome to my portfolio. I am Vanitha P, an AI & Senior Web Developer with over 6 years of experience. My core responsibilities include Full-Stack Web Development, Custom WordPress Theme Engineering, Generative AI Tool Integration, and UI/UX Optimization.";
     
     var utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 1.0;
