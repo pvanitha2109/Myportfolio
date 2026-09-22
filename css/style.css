@@ -943,25 +943,28 @@ blockquote {
     transition: all 0.4s ease-in-out;
 }
 
-/* 100% Full Width Edge-To-Edge Footer & Body Background */
-html {
+/* 100% Full Width Edge-To-Edge Footer & Body Settings */
+html, body {
     overflow-x: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #0b0f19 !important;
+    background-color: #ffffff !important;
 }
 
-body {
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #0b0f19 !important;
-    min-height: 100vh !important;
+/* Contact Form Input Field Protection */
+.form-control {
+    background-color: #ffffff !important;
+    color: #12141D !important;
+    border: 1px solid #ced4da !important;
 }
-
-/* White & Light background sections */
-.bg-light {
-    background-color: #f8fafc !important;
+.form-control:focus {
+    background-color: #ffffff !important;
+    color: #12141D !important;
+    border-color: #6244C5 !important;
+    box-shadow: 0 0 0 0.25rem rgba(98, 68, 197, 0.25) !important;
+}
+.form-floating > label {
+    color: #6c757d !important;
 }
 
 /* 100% Full Bleed Edge-To-Edge Footer & Full Width Sections */
