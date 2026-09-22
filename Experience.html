@@ -63,7 +63,7 @@
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -424,30 +424,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<script>
-    function animateCountdown(id, targetNumber, duration) {
-    const element = document.getElementById(id);
-    const increment = targetNumber / duration;
-    let currentNumber = 0;
-    const interval = setInterval(() => {
-        currentNumber += increment;
-        element.textContent = Math.ceil(currentNumber);
-        if (currentNumber >= targetNumber) {
-            clearInterval(interval);
-            element.textContent = targetNumber;
-        }
-    }, 90); // Decreased interval for faster counting
-}
-
-animateCountdown('clients', 1000, 89);
-animateCountdown('projects', 30, 89);
-animateCountdown('development', 60, 34);
-animateCountdown('designing', 100, 34);
-
-</script>
-
-   
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -463,11 +439,11 @@ animateCountdown('designing', 100, 34);
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        document.getElementById('pdfLink').addEventListener('click', function () {
-            // Add your JavaScript code here
-        });
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
     </script>
-
 </body>
 
 </html>
