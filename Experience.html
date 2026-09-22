@@ -35,8 +35,30 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-        body{
-            overflow-x: hidden;
+        html {
+            overflow-x: hidden !important;
+            width: 100%;
+        }
+        body {
+            overflow-x: hidden !important;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+        }
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .client-logo-img {
+            max-height: 42px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+        .client-logo-img:hover {
+            opacity: 1;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -85,9 +107,9 @@
         </div>
     </div>
 
-  <div class="container-fluid mt-3 col-12 wow fadeInUp"  data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+  <div class="container my-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
    
-   <div class="row p-4 project-client">
+   <div class="row project-client align-items-center">
     <div class="col-lg-4">
         <img src="img/about-1.jpg" alt="" class="img-fluid rounded shadow-sm">
     </div>
@@ -292,38 +314,26 @@
   </div>
 
   <!-- Client Website Logos Section (Below Stats Bar) -->
-  <div class="container-fluid bg-white py-4 border-bottom shadow-sm">
+  <div class="container-fluid bg-white py-4 border-0 shadow-none overflow-hidden" style="box-shadow: none !important; border: none !important;">
     <div class="container">
-        <div class="row align-items-center justify-content-center g-4">
+        <div class="row align-items-center justify-content-between g-4">
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="https://internationalpridebooksofworldrecords.com/" target="_blank" class="d-block p-2">
-                    <img src="img/c1.png" alt="International Pride Book" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-cisco.svg" alt="Cisco" class="img-fluid client-logo-img">
             </div>
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="https://gokulsbuildmart.in/" target="_blank" class="d-block p-2">
-                    <img src="img/c2.png" alt="Gokul's Build Mart" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-statestreet.svg" alt="State Street" class="img-fluid client-logo-img">
             </div>
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="https://www.lionsclubs.org/" target="_blank" class="d-block p-2">
-                    <img src="img/c3.png" alt="Lions Club Directory" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-kindermorgan.svg" alt="Kinder Morgan" class="img-fluid client-logo-img">
             </div>
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="http://nbkquickwash.com/" target="_blank" class="d-block p-2">
-                    <img src="img/c7.png" alt="NBK Quick Wash" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-johnsoncontrols.svg" alt="Johnson Controls" class="img-fluid client-logo-img">
             </div>
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="https://lasak.in" target="_blank" class="d-block p-2">
-                    <img src="img/c5.png" alt="Lasak Tech" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-ubisoft.svg" alt="Ubisoft" class="img-fluid client-logo-img">
             </div>
             <div class="col-6 col-md-4 col-lg-2 text-center">
-                <a href="https://vizwebsolutions.com/" target="_blank" class="d-block p-2">
-                    <img src="img/c6.png" alt="Viz Web Solutions" class="img-fluid" style="max-height: 48px; object-fit: contain;">
-                </a>
+                <img src="img/logo-disney.svg" alt="Disney" class="img-fluid client-logo-img">
             </div>
         </div>
     </div>

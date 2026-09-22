@@ -70,6 +70,12 @@
 
 
 /********** Template CSS **********/
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+}
+
 :root {
     --primary: #6244C5;
     --secondary: #FFC448;

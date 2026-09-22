@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="180" height="48">
+  <g fill="#505a69">
+    <text x="5" y="34" font-family="'Inter', Arial, sans-serif" font-size="16" font-weight="600">Johnson</text>
+    <circle cx="100" cy="28" r="14" fill="none" stroke="#505a69" stroke-width="2.5"/>
+    <path d="M92,22 C98,18 104,22 108,27 M90,28 C96,25 104,30 110,29" fill="none" stroke="#505a69" stroke-width="2"/>
+    <text x="122" y="34" font-family="'Inter', Arial, sans-serif" font-size="16" font-weight="400">Controls</text>
+  </g>
+</svg>
