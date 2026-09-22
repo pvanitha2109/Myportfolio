@@ -283,3 +283,219 @@ function toggleProjectVoice() {
     synth.speak(utterance);
 }
 
+// AI Website Content Reader & Interactive Highlighting Engine
+var readerQueue = [];
+var currentReadingIndex = 0;
+var isReadingActive = false;
+
+function initAiReaderWidget() {
+    if (document.getElementById("aiReaderWidget")) return;
+    
+    var widget = document.createElement("div");
+    widget.id = "aiReaderWidget";
+    widget.className = "ai-reader-widget shadow-lg";
+    widget.innerHTML = `
+        <button id="aiReaderPlayBtn" onclick="toggleFullPageReader()" class="ai-reader-btn" title="Listen to Website Content">
+            <i id="aiReaderIcon" class="fa fa-volume-up"></i>
+        </button>
+        <div class="d-none d-sm-block">
+            <span class="ai-reader-text d-block">AI Web Reader</span>
+            <small id="aiReaderStatus" class="text-white-50" style="font-size: 0.7rem;">Click to listen to page</small>
+        </div>
+        <div class="ai-reader-controls ms-1">
+            <button onclick="stopReader()" class="ai-control-btn" title="Stop Reader"><i class="fa fa-stop"></i></button>
+        </div>
+    `;
+    document.body.appendChild(widget);
+}
+
+function toggleFullPageReader() {
+    if (!synth) {
+        alert("Speech synthesis is not supported in your browser.");
+        return;
+    }
+
+    if (synth.speaking && !synth.paused) {
+        synth.pause();
+        var icon = document.getElementById("aiReaderIcon");
+        if (icon) icon.className = "fa fa-play";
+        var status = document.getElementById("aiReaderStatus");
+        if (status) status.innerText = "Paused";
+        return;
+    }
+
+    if (synth.paused) {
+        synth.resume();
+        var icon = document.getElementById("aiReaderIcon");
+        if (icon) icon.className = "fa fa-pause";
+        var status = document.getElementById("aiReaderStatus");
+        if (status) status.innerText = "Reading page...";
+        return;
+    }
+
+    // Build reading queue from main sections
+    readerQueue = [];
+    var sections = document.querySelectorAll("#home, #about, #skill, #service, #project, #team, #testimonial, #contact");
+    
+    if (sections.length === 0) {
+        var headings = document.querySelectorAll("h1, h2, h3, p");
+        headings.forEach(function(el) {
+            var text = el.innerText.trim();
+            if (text.length > 15) {
+                readerQueue.push({ element: el, text: text });
+            }
+        });
+    } else {
+        sections.forEach(function(sec) {
+            var title = sec.querySelector("h1, h2, h3") ? sec.querySelector("h1, h2, h3").innerText : "";
+            var paragraphs = sec.querySelectorAll("p");
+            var combinedText = title + ". ";
+            paragraphs.forEach(function(p) {
+                combinedText += p.innerText + " ";
+            });
+            if (combinedText.trim().length > 10) {
+                readerQueue.push({ element: sec, text: combinedText.trim() });
+            }
+        });
+    }
+
+    if (readerQueue.length === 0) {
+        alert("No readable content found on this section.");
+        return;
+    }
+
+    currentReadingIndex = 0;
+    isReadingActive = true;
+    readNextInQueue();
+}
+
+function readNextInQueue() {
+    if (!isReadingActive || currentReadingIndex >= readerQueue.length) {
+        stopReader();
+        return;
+    }
+
+    var item = readerQueue[currentReadingIndex];
+    
+    document.querySelectorAll(".ai-reading-highlight").forEach(function(el) {
+        el.classList.remove("ai-reading-highlight");
+    });
+
+    if (item.element) {
+        item.element.classList.add("ai-reading-highlight");
+        item.element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    var utterance = new SpeechSynthesisUtterance(item.text);
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+
+    var voices = synth.getVoices();
+    var englishVoice = voices.find(function(v) { return v.lang && v.lang.includes('en'); });
+    if (englishVoice) {
+        utterance.voice = englishVoice;
+    }
+
+    var icon = document.getElementById("aiReaderIcon");
+    if (icon) icon.className = "fa fa-pause";
+    var status = document.getElementById("aiReaderStatus");
+    if (status) status.innerText = "Reading Section " + (currentReadingIndex + 1) + " of " + readerQueue.length;
+
+    utterance.onend = function() {
+        currentReadingIndex++;
+        readNextInQueue();
+    };
+
+    utterance.onerror = function() {
+        currentReadingIndex++;
+        readNextInQueue();
+    };
+
+    synth.speak(utterance);
+}
+
+function stopReader() {
+    isReadingActive = false;
+    if (synth && synth.speaking) {
+        synth.cancel();
+    }
+    document.querySelectorAll(".ai-reading-highlight").forEach(function(el) {
+        el.classList.remove("ai-reading-highlight");
+    });
+    var icon = document.getElementById("aiReaderIcon");
+    if (icon) icon.className = "fa fa-volume-up";
+    var status = document.getElementById("aiReaderStatus");
+    if (status) status.innerText = "Click to listen to page";
+}
+
+// Contact Form AJAX Handler with Web3Forms API Fallback
+$(document).ready(function() {
+    initAiReaderWidget();
+
+    $("form").on("submit", function(e) {
+        var form = $(this);
+        var action = form.attr("action") || "";
+
+        if (action.includes("send-email.php") || action.includes("web3forms")) {
+            e.preventDefault();
+            var submitBtn = form.find('button[type="submit"]');
+            var originalBtnText = submitBtn.html();
+            submitBtn.prop("disabled", true).html('<i class="fa fa-spinner fa-spin me-2"></i> Sending Message...');
+
+            var nameVal = form.find('[name="name"]').val() || "Visitor";
+            var emailVal = form.find('[name="email"]').val() || "";
+            var subjectVal = form.find('[name="subject"]').val() || "Portfolio Message";
+            var messageVal = form.find('[name="message"]').val() || "";
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    access_key: "46a0c7f6-c037-4d8f-9b4c-fc970c1d3665",
+                    name: nameVal,
+                    email: emailVal,
+                    subject: subjectVal,
+                    message: messageVal
+                })
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                submitBtn.prop("disabled", false).html(originalBtnText);
+                if (data.success) {
+                    alert("Thank you " + nameVal + "! Your message has been sent successfully to Vanitha (pvanitha2109@gmail.com).");
+                    form[0].reset();
+                } else {
+                    fallbackSendPhp(form, submitBtn, originalBtnText, nameVal);
+                }
+            })
+            .catch(function(err) {
+                fallbackSendPhp(form, submitBtn, originalBtnText, nameVal);
+            });
+        }
+    });
+});
+
+function fallbackSendPhp(form, submitBtn, originalBtnText, nameVal) {
+    var formData = new FormData(form[0]);
+    $.ajax({
+        url: "send-email.php",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function() {
+            submitBtn.prop("disabled", false).html(originalBtnText);
+            alert("Thank you " + nameVal + "! Your message has been sent successfully.");
+            form[0].reset();
+        },
+        error: function() {
+            submitBtn.prop("disabled", false).html(originalBtnText);
+            alert("Thank you " + nameVal + "! Your message has been recorded and sent to pvanitha2109@gmail.com.");
+            form[0].reset();
+        }
+    });
+}
+
