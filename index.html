@@ -229,10 +229,60 @@
                             </div>
                         </div>
 
-                        <!-- Demo Video Tab -->
+                        <!-- Interactive AI Project Video Reel Tab -->
                         <div class="tab-pane fade" id="demo-video-content" role="tabpanel">
-                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden border border-secondary">
-                                <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                            <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-primary" style="background: #090d16; min-height: 380px;">
+                                <!-- Current Active Project Poster & Details -->
+                                <div id="projectVideoCard" class="position-relative" style="height: 300px; overflow: hidden;">
+                                    <img id="projectReelImg" src="img/portfolio-9.jpg" alt="Project Showcase" class="w-100 h-100 opacity-75" style="object-fit: cover; transition: all 0.5s ease;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 p-3 p-md-4 d-flex flex-column justify-content-between" style="background: linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.95) 100%);">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span id="projectCategoryBadge" class="badge bg-primary px-3 py-2 rounded-pill shadow">
+                                                <i class="fa fa-globe me-1"></i> Featured Live Website
+                                            </span>
+                                            <span id="projectCounter" class="badge bg-dark border border-secondary px-3 py-2 rounded-pill text-white">
+                                                Project 1 of 5
+                                            </span>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 id="projectReelTitle" class="text-white fw-bold mb-1">International Pride Books of World Records</h4>
+                                            <p id="projectReelDesc" class="text-light small mb-3" style="max-height: 60px; overflow: hidden; line-height: 1.4;">
+                                                Official world record registration portal with custom database management, applicant submission workflows, and digital certification issuance.
+                                            </p>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <a id="projectReelLink" href="https://internationalpridebooksofworldrecords.com/" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3 py-2 fw-bold shadow">
+                                                    <i class="fa fa-external-link-alt me-1"></i> Open Live Website
+                                                </a>
+                                                <button id="playProjectVoiceBtn" onclick="toggleProjectVoice()" class="btn btn-sm btn-outline-info rounded-pill px-3 py-2 fw-bold">
+                                                    <i class="fa fa-volume-up me-1"></i> Listen to AI Explanation
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project Selector Slider Controls -->
+                                <div class="p-3 bg-dark border-top border-secondary">
+                                    <small class="text-muted fw-bold d-block mb-2 text-uppercase" style="letter-spacing: 1px;">Click Project to View & Explain:</small>
+                                    <div class="d-flex flex-wrap gap-2" id="projectReelButtons">
+                                        <button onclick="switchProjectReel(0)" class="btn btn-sm btn-primary active-project-btn text-white py-1 px-2" style="font-size: 11px;">
+                                            1. International Pride Books
+                                        </button>
+                                        <button onclick="switchProjectReel(1)" class="btn btn-sm btn-outline-secondary text-white py-1 px-2" style="font-size: 11px;">
+                                            2. Lions Clubs International
+                                        </button>
+                                        <button onclick="switchProjectReel(2)" class="btn btn-sm btn-outline-secondary text-white py-1 px-2" style="font-size: 11px;">
+                                            3. NBK QuickWash
+                                        </button>
+                                        <button onclick="switchProjectReel(3)" class="btn btn-sm btn-outline-secondary text-white py-1 px-2" style="font-size: 11px;">
+                                            4. Lasak Corporate
+                                        </button>
+                                        <button onclick="switchProjectReel(4)" class="btn btn-sm btn-outline-secondary text-white py-1 px-2" style="font-size: 11px;">
+                                            5. VizWeb Solutions
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

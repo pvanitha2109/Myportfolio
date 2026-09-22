@@ -186,3 +186,100 @@ function stopAiVoice() {
     }
 }
 
+// AI Project Reel Data & Controls
+var projectsData = [
+    {
+        title: "International Pride Books of World Records",
+        desc: "Official world record registration portal with custom database management, applicant submission workflows, and digital certification issuance.",
+        image: "img/portfolio-9.jpg",
+        link: "https://internationalpridebooksofworldrecords.com/",
+        speech: "This project is International Pride Books of World Records. A full-featured record registration platform built with custom WordPress database architecture, automated certification workflows, and application submission forms."
+    },
+    {
+        title: "Lions Clubs International District Portal",
+        desc: "Global non-profit community portal featuring district activity tracking, event management, member directories, and online donation forms.",
+        image: "img/portfolio-10.jpg",
+        link: "https://www.lionsclubs.org/",
+        speech: "This project is the Lions Clubs International District Portal. Designed for community service management, featuring district event calendars, member directories, activity tracking, and secure donation portals."
+    },
+    {
+        title: "NBK QuickWash Service System",
+        desc: "Modern automotive detailing & laundry booking web application with dynamic pricing, service scheduling, and responsive customer interface.",
+        image: "img/portfolio-11.jpg",
+        link: "http://nbkquickwash.com/",
+        speech: "This project is NBK QuickWash. A high-performance automotive and laundry booking portal engineered with real-time service estimation, instant online slot scheduling, and mobile user experience."
+    },
+    {
+        title: "Lasak Corporate Solutions",
+        desc: "Enterprise IT solutions & recruitment consultancy platform showcasing corporate services, career listings, and client consultation portals.",
+        image: "img/portfolio-7.jpg",
+        link: "http://lasak.in/",
+        speech: "This project is Lasak Corporate Solutions. A modern corporate platform providing IT consulting services, recruitment tracking systems, and interactive client communication features."
+    },
+    {
+        title: "VizWeb Solutions Agency Website",
+        desc: "High-tech web development agency showcase highlighting custom web software development, digital marketing, and cloud deployment solutions.",
+        image: "img/portfolio-8.jpg",
+        link: "http://vizwebsolutions.com/",
+        speech: "This project is VizWeb Solutions. A sleek digital agency portfolio highlighting custom web application development, UI UX design systems, and cloud software engineering solutions."
+    }
+];
+
+var currentProjectIndex = 0;
+
+function switchProjectReel(index) {
+    if (index < 0 || index >= projectsData.length) return;
+    currentProjectIndex = index;
+    var proj = projectsData[index];
+
+    var img = document.getElementById("projectReelImg");
+    var title = document.getElementById("projectReelTitle");
+    var desc = document.getElementById("projectReelDesc");
+    var link = document.getElementById("projectReelLink");
+    var counter = document.getElementById("projectCounter");
+
+    if (img) img.src = proj.image;
+    if (title) title.innerText = proj.title;
+    if (desc) desc.innerText = proj.desc;
+    if (link) link.href = proj.link;
+    if (counter) counter.innerText = "Project " + (index + 1) + " of " + projectsData.length;
+
+    var buttons = document.querySelectorAll("#projectReelButtons button");
+    buttons.forEach(function(btn, i) {
+        if (i === index) {
+            btn.className = "btn btn-sm btn-primary active-project-btn text-white py-1 px-2";
+        } else {
+            btn.className = "btn btn-sm btn-outline-secondary text-white py-1 px-2";
+        }
+    });
+
+    if (synth && synth.speaking) {
+        synth.cancel();
+    }
+}
+
+function toggleProjectVoice() {
+    if (!synth) {
+        alert("Speech synthesis is not supported in your browser.");
+        return;
+    }
+
+    if (synth.speaking) {
+        synth.cancel();
+        return;
+    }
+
+    var proj = projectsData[currentProjectIndex];
+    var utterance = new SpeechSynthesisUtterance(proj.speech);
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+
+    var voices = synth.getVoices();
+    var englishVoice = voices.find(function(v) { return v.lang && v.lang.includes('en'); });
+    if (englishVoice) {
+        utterance.voice = englishVoice;
+    }
+
+    synth.speak(utterance);
+}
+
