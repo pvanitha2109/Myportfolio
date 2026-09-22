@@ -943,11 +943,12 @@ blockquote {
     transition: all 0.4s ease-in-out;
 }
 
-/* 100% Full Width Edge-To-Edge Footer & Body Settings */
+/* Clean 100% Full Width Footer & Overflow Prevention */
 html {
     overflow-x: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
     background-color: #0b0f19 !important;
 }
 
@@ -955,6 +956,7 @@ body {
     overflow-x: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
     background-color: #ffffff;
     min-height: 100vh !important;
     display: flex !important;
@@ -977,41 +979,20 @@ body {
     color: #6c757d !important;
 }
 
-/* 100% Full Bleed Edge-To-Edge Footer & Full Width Sections */
+/* 100% Full Width Footer without Overflow */
 footer.site-footer {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
+    width: 100% !important;
     margin-top: auto !important;
     margin-bottom: 0 !important;
     padding-bottom: 3rem !important;
     background: #0b0f19 !important;
     display: block !important;
-}
-
-/* Infinite Dark Bottom Extension under Footer (Zero White Gap) */
-footer.site-footer::after {
-    content: "" !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 2000px !important;
-    background-color: #0b0f19 !important;
-    z-index: 999 !important;
-    pointer-events: none !important;
-}
-
-#figma-ui-ux, #testimonial {
-    width: 100vw !important;
     position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
+}
+
+/* Clean Full-Width Sections without Viewport Overflow */
+#figma-ui-ux, #testimonial {
+    width: 100% !important;
     background-color: #f8fafc !important;
 }
 
