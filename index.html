@@ -78,21 +78,20 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
                     <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">VANITHA</h1>
+                    <h1 class="display-3 mb-3">VANITHA P</h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Web Developer, WordPress Developer, Front End Developer, Full-Stack Developer, UI/UX Designer</div>
+                    <div class="typed-text d-none">AI & Web Developer, Senior WordPress Developer, Full-Stack Engineer, Generative AI Specialist, UI/UX Designer</div>
                     <div class="d-flex align-items-center pt-5">
-                        <!-- <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a> -->
-                        <a id="pdfLink" class="btn btn-primary py-3 px-4 me-5" href="https://drive.google.com/file/d/1aGcUtcD5HyZtUioSVjjAgJkVhFFIO5Ty/view?usp=drivesdk" target="_blank">Download CV</a>
+                        <a id="pdfLink" class="btn btn-primary py-3 px-4 me-4" href="https://drive.google.com/file/d/1aGcUtcD5HyZtUioSVjjAgJkVhFFIO5Ty/view?usp=drivesdk" target="_blank">Download CV</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">AI Intro & Video Demo</h5>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid" src="img/profile.png" alt="">
+                    <img class="img-fluid" src="img/profile.png" alt="Vanitha AI & Web Developer">
                 </div>
             </div>
         </div>
@@ -102,17 +101,107 @@
 
     <!-- Video Modal Start -->
     <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0 overflow-hidden shadow-lg" style="background: #0f172a; color: #f8fafc;">
+                <div class="modal-header border-0 py-3 px-4" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);">
+                    <h5 class="modal-title text-white mb-0 d-flex align-items-center font-weight-bold" id="exampleModalLabel">
+                        <i class="fa fa-robot me-2 fs-4"></i> Vanitha P — AI & Web Developer Intro
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" onclick="stopAiVoice()"></button>
                 </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
+                <div class="modal-body p-4">
+                    <!-- Nav Tabs for Switching AI Intro vs YouTube Video -->
+                    <ul class="nav nav-pills nav-justified mb-3 border-bottom border-secondary pb-3" id="videoTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold py-2 text-white" id="ai-intro-tab" data-bs-toggle="pill" data-bs-target="#ai-intro-content" type="button" role="tab" style="background: rgba(99, 102, 241, 0.4); border: 1px solid #6366f1;">
+                                <i class="fa fa-microchip me-2"></i>🤖 AI Voice Intro & Avatar
+                            </button>
+                        </li>
+                        <li class="nav-item ms-2" role="presentation">
+                            <button class="nav-link fw-bold py-2 text-white" id="demo-video-tab" data-bs-toggle="pill" data-bs-target="#demo-video-content" type="button" role="tab" style="background: rgba(255,255,255,0.1);">
+                                <i class="fab fa-youtube me-2 text-danger"></i>🎥 Video Demo Showcase
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="videoTabsContent">
+                        <!-- AI Intro Tab -->
+                        <div class="tab-pane fade show active" id="ai-intro-content" role="tabpanel">
+                            <div class="position-relative rounded-4 overflow-hidden shadow" style="background: #000; min-height: 340px; border: 1px solid rgba(168, 85, 247, 0.4);">
+                                <img src="img/ai-intro-preview.png" alt="Vanitha AI Intro" class="w-100 h-100 opacity-75" style="max-height: 360px; object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 p-4 d-flex flex-column justify-content-between" style="background: linear-gradient(180deg, rgba(15,23,42,0.6) 0%, rgba(15,23,42,0.92) 100%);">
+                                    
+                                    <!-- Top Status -->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success bg-gradient px-3 py-2 rounded-pill shadow-sm">
+                                            <i class="fa fa-circle text-white me-1 animate-pulse" style="font-size: 8px;"></i> AI Voice Active
+                                        </span>
+                                        <span class="badge bg-dark border border-primary px-3 py-2 rounded-pill">
+                                            <i class="fa fa-code me-1 text-primary"></i> Vanitha Portfolio AI
+                                        </span>
+                                    </div>
+
+                                    <!-- Center Voice Action -->
+                                    <div class="text-center py-3">
+                                        <button id="playAiVoiceBtn" onclick="toggleAiVoice()" class="btn btn-lg btn-primary rounded-circle p-4 shadow-lg mb-3 animate-bounce" style="width: 76px; height: 76px; border: 3px solid #a855f7; background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);">
+                                            <i id="aiVoiceIcon" class="fa fa-play text-white fs-3"></i>
+                                        </button>
+                                        <h4 class="text-white fw-bold mb-1">Click to Listen to Vanitha's AI Intro</h4>
+                                        <p class="text-light fs-6 mb-2">Generative AI & Senior Web Developer Presentation</p>
+                                        
+                                        <!-- Sound Wave Equalizer -->
+                                        <div id="soundWave" class="d-flex justify-content-center align-items-center gap-1 opacity-50" style="height: 24px;">
+                                            <span class="bar bg-primary" style="width: 4px; height: 12px; border-radius: 2px;"></span>
+                                            <span class="bar bg-primary" style="width: 4px; height: 20px; border-radius: 2px;"></span>
+                                            <span class="bar bg-primary" style="width: 4px; height: 15px; border-radius: 2px;"></span>
+                                            <span class="bar bg-primary" style="width: 4px; height: 24px; border-radius: 2px;"></span>
+                                            <span class="bar bg-primary" style="width: 4px; height: 10px; border-radius: 2px;"></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Subtitle Card -->
+                                    <div class="bg-dark bg-opacity-75 rounded-3 p-3 border border-secondary">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <i class="fa fa-comment-dots me-2 text-info"></i>
+                                            <small class="text-info fw-bold">AI Voice Transcript:</small>
+                                        </div>
+                                        <p id="aiTranscriptText" class="mb-0 text-white small fs-6" style="line-height: 1.5;">
+                                            "Hello! Welcome to my portfolio. I am Vanitha P, an AI & Senior Web Developer with over 6 years of experience building modern, scalable web applications, WordPress websites, and custom AI tools."
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Highlights Below -->
+                            <div class="row g-2 mt-3 text-center">
+                                <div class="col-4">
+                                    <div class="p-2 rounded bg-dark border border-secondary">
+                                        <small class="text-muted d-block">Experience</small>
+                                        <strong class="text-white">6+ Years</strong>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2 rounded bg-dark border border-secondary">
+                                        <small class="text-muted d-block">Core Focus</small>
+                                        <strong class="text-white">AI & Web Dev</strong>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2 rounded bg-dark border border-secondary">
+                                        <small class="text-muted d-block">Specialization</small>
+                                        <strong class="text-white">WordPress & React</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Demo Video Tab -->
+                        <div class="tab-pane fade" id="demo-video-content" role="tabpanel">
+                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden border border-secondary">
+                                <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

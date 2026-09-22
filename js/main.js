@@ -70,19 +70,22 @@
     }
 
 
-    // Modal Video
+    // Modal Video & AI Intro Voice
     var $videoSrc;
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
+        if ($videoSrc) {
+            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        }
+    });
     $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
-
+        if ($videoSrc) {
+            $("#video").attr('src', $videoSrc);
+        }
+        stopAiVoice();
+    });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
@@ -123,4 +126,63 @@
 
     
 })(jQuery);
+
+// AI Voice Speech Synthesis Controller
+var synth = window.speechSynthesis;
+
+function toggleAiVoice() {
+    if (!synth) {
+        alert("Speech synthesis is not supported in your browser.");
+        return;
+    }
+    
+    var icon = document.getElementById("aiVoiceIcon");
+    var wave = document.getElementById("soundWave");
+    
+    if (synth.speaking) {
+        synth.cancel();
+        if (icon) icon.className = "fa fa-play text-white fs-3";
+        if (wave) wave.style.opacity = "0.5";
+        return;
+    }
+
+    var text = "Hello! Welcome to my portfolio. I am Vanitha P, an AI & Senior Web Developer with over 6 years of experience building modern, scalable web applications, WordPress websites, and custom AI tools. I specialize in React, Node.js, PHP, and Generative AI integrations.";
+    
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+    
+    var voices = synth.getVoices();
+    var englishVoice = voices.find(function(v) { return v.lang && v.lang.includes('en'); });
+    if (englishVoice) {
+        utterance.voice = englishVoice;
+    }
+
+    utterance.onstart = function() {
+        if (icon) icon.className = "fa fa-pause text-white fs-3";
+        if (wave) wave.style.opacity = "1";
+    };
+
+    utterance.onend = function() {
+        if (icon) icon.className = "fa fa-play text-white fs-3";
+        if (wave) wave.style.opacity = "0.5";
+    };
+
+    utterance.onerror = function() {
+        if (icon) icon.className = "fa fa-play text-white fs-3";
+        if (wave) wave.style.opacity = "0.5";
+    };
+
+    synth.speak(utterance);
+}
+
+function stopAiVoice() {
+    if (synth && synth.speaking) {
+        synth.cancel();
+        var icon = document.getElementById("aiVoiceIcon");
+        if (icon) icon.className = "fa fa-play text-white fs-3";
+        var wave = document.getElementById("soundWave");
+        if (wave) wave.style.opacity = "0.5";
+    }
+}
 
