@@ -54,7 +54,10 @@
     word-break: break-word;
 }
 
-.fa-solid, .fas, .fa-brands, .fab {
+.box-part .fa-solid, 
+.box-part .fas, 
+.box-part .fa-brands, 
+.box-part .fab {
     color: #6244C5;
     font-size: 46px;
     transition: transform 0.3s ease;
@@ -940,13 +943,28 @@ blockquote {
     transition: all 0.4s ease-in-out;
 }
 
-/* 100% Full Width Edge-To-Edge Footer */
-html, body {
+/* 100% Full Width Edge-To-Edge Footer & Body Background */
+html {
     overflow-x: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
+    background-color: #0b0f19 !important;
 }
 
+body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #0b0f19 !important;
+    min-height: 100vh !important;
+}
+
+/* White & Light background sections */
+.bg-light {
+    background-color: #f8fafc !important;
+}
+
+/* 100% Full Bleed Edge-To-Edge Footer & Full Width Sections */
 footer.site-footer {
     width: 100vw !important;
     position: relative !important;
@@ -955,8 +973,19 @@ footer.site-footer {
     margin-left: -50vw !important;
     margin-right: -50vw !important;
     margin-bottom: 0 !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 3rem !important;
     background: #0b0f19 !important;
+    display: block !important;
+}
+
+#figma-ui-ux, #testimonial {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    background-color: #f8fafc !important;
 }
 
 .social-circle-btn {

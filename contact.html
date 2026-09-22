@@ -28,7 +28,37 @@
     
 </head>
 <body>
-    <div class="container-fluid bg-light  my-6 mt-0" id="home">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h2 class="fw-bold m-0" style="color: #6244C5;"><span style="color: #6244C5;">Vani</span><span style="color: #12141D;">Tha</span></h2>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html#about" class="nav-item nav-link">About</a>
+                <a href="index.html#skill" class="nav-item nav-link">Skills</a>
+                <a href="index.html#service" class="nav-item nav-link">Services</a>
+            </div>
+            <a href="index.html" class="navbar-brand py-3 px-3 mx-2 d-none d-lg-block text-decoration-none">
+                <h2 class="fw-bold m-0" style="font-size: 26px;"><span style="color: #6244C5;">Vani</span><span style="color: #12141D;">Tha</span></h2>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="Experience.html" class="nav-item nav-link">Experience</a>
+                <a href="index.html#project" class="nav-item nav-link">Projects</a>
+                <a href="index.html#figma-ui-ux" class="nav-item nav-link"><i class="fab fa-figma me-1 text-primary" style="font-size: 15px;"></i>Figma UI/UX</a>
+                <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+                <a href="index.html#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container-fluid bg-light my-6 mt-0" id="home" style="padding-top: 100px !important;">
         <div class="container-xxl pb-5 " id="contact">
        
             <div class="container  py-5">
@@ -96,19 +126,85 @@
          
     </div>
 
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-5">
-        <div class="container text-center">
-            <p class="copy-right text-white fw-bold mb-3">Connect with me</p>
-            <div class="d-flex justify-content-center contact-para mb-3" style="margin-bottom: 1rem !important;">
-                <a class="footer-social-link" href="https://www.linkedin.com/in/vanitha-p-766b5b278" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Footer Start -->
+    <footer class="site-footer bg-dark text-white pt-5 pb-4 mt-5" style="background-color: #0b0f19 !important; width: 100%;">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Column 1: Brand & Profile -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white fw-bold mb-3"><span style="color: #8b5cf6;">Vani</span>Tha P</h3>
+                    <p class="text-white-50 mb-4" style="line-height: 1.8; font-size: 0.95rem;">
+                        Senior Web & WordPress Developer with 6+ years of experience engineering high-performance web applications, custom WordPress platforms, UI/UX designs, and Generative AI workflows.
+                    </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://www.linkedin.com/in/vanitha-p-766b5b278" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2);">
+                            <i class="fab fa-linkedin-in text-white fs-5"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1aGcUtcD5HyZtUioSVjjAgJkVhFFIO5Ty/view?usp=drivesdk" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2);">
+                            <i class="fa fa-file-pdf text-white fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation Links -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white fw-bold mb-4 position-relative pb-2" style="border-bottom: 2px solid #8b5cf6; display: inline-block;">Quick Navigation</h5>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#home"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Home</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#about"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>About</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#skill"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Skills</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#service"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Services</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#project"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Projects</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="index.html#figma-ui-ux"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Figma UI/UX</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="Experience.html"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Experience</a>
+                            <a class="text-white-50 text-decoration-none d-block py-1 hover-purple" href="contact.html"><i class="fa fa-chevron-right text-primary me-2" style="font-size: 11px;"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white fw-bold mb-4 position-relative pb-2" style="border-bottom: 2px solid #8b5cf6; display: inline-block;">Get In Touch</h5>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="btn-square rounded-circle bg-primary text-white me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; flex-shrink: 0;">
+                            <i class="fa fa-user-check text-white fs-6"></i>
+                        </div>
+                        <div>
+                            <small class="text-white-50 d-block">Role</small>
+                            <span class="text-white fw-semibold">Senior Web & WordPress Developer</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="btn-square rounded-circle bg-primary text-white me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; flex-shrink: 0;">
+                            <i class="fab fa-linkedin-in text-white fs-6"></i>
+                        </div>
+                        <div>
+                            <small class="text-white-50 d-block">LinkedIn Profile</small>
+                            <a href="https://www.linkedin.com/in/vanitha-p-766b5b278" target="_blank" class="text-white fw-semibold text-decoration-none">vanitha-p-766b5b278</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2 mt-2 font-weight-bold shadow-sm">
+                        <i class="fa fa-paper-plane me-2"></i>Send Message
+                    </a>
+                </div>
             </div>
-            <div class="footer-1 text-white-50">
-                &copy; <a class="border-bottom text-secondary fw-bold" href="#">p.Vanitha</a>, All Rights Reserved.
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center py-2">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-white-50 mb-0" style="font-size: 0.9rem;">&copy; <span class="text-white fw-bold">Vanitha P Portfolio</span> — All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 small mb-0">Engineered with HTML5, CSS3, JS, Bootstrap & AI Workflows</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+    </footer>
+    <!-- Footer End -->
     <!-- Contact Start -->
 
     <!-- Contact End -->
