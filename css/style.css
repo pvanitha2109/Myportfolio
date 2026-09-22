@@ -72,8 +72,13 @@
 /********** Template CSS **********/
 html, body {
     overflow-x: hidden !important;
+    overflow-y: auto !important;
     width: 100%;
     position: relative;
+}
+
+.navbar {
+    display: flex !important;
 }
 
 :root {

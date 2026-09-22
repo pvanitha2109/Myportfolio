@@ -16,14 +16,8 @@
     new WOW().init();
 
 
-    // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
-    });
+    // Navbar on scrolling (Always keep navbar visible)
+    $('.navbar').css('display', 'flex');
 
 
     // Smooth scrolling on the navbar links
